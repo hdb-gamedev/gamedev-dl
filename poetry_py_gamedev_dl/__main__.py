@@ -1,5 +1,3 @@
-# one hour 20 minutes of driving 11/11/2021. 10 minutes were in the dark
-
 import requests
 from zipfile import ZipFile
 from pathlib import Path
