@@ -224,7 +224,7 @@ def clone_samples(repo, dlpath, gitdlpath):
                    cwd=dlpath, stdout=subprocess.PIPE)
 
 
-@Gooey(progress_regex=r'^Progress: (\d+)%$', program_name='Gamedev Club Installer')
+# @Gooey(progress_regex=r'^Progress: (\d+)%$', program_name='Gamedev Club Installer')
 def main():
     default_download_message = ''
     default_download_folder = selfpath.resolve().parent
@@ -234,8 +234,8 @@ def main():
         default_download_folder = Path(default_download_folder, 'gamedev')
         default_download_message = f'Defaulting download folder to {default_download_folder}, since this directory has other things in it'
     log(default_download_message)
-    default_shortcut_folder = Path(Path.home(), 'Desktop')
-    #default_shortcut_folder = default_download_folder
+    # default_shortcut_folder = Path(Path.home(), 'Desktop')
+    default_shortcut_folder = default_download_folder
     log(f'Shortcuts folder defaulting to {default_shortcut_folder}')
 
     parser = GooeyParser(
